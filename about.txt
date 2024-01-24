@@ -1,0 +1,11 @@
+PACOTES
+0. npm init -y
+1. express ==> npm install express
+2. nodemon ==> npm instal --save-dev nodemon
+3. mysql2 ==> npm install mysql2
+4. cors ==> npm install cors
+5. knex ==> npm install knex
+6. Configuração  do arquivo package.json
+7. npm run dev ==> ligar o server
+
+instalar rest client ==> viaual code

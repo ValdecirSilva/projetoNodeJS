@@ -1,0 +1,50 @@
+###
+
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/alunos
+
+###
+POST http://localhost:3000/alunos/cadastro
+content-type: application/json
+
+{
+        "nome": "Alison",
+        "matricula": "01000",
+        "email": "falecomval@hotmail.com",
+        "turma": "A",
+        "serie": 3,
+        "sexo": "M",
+        "telefone": "(84) 988382952",
+        "endereco": "Rua Clodoaldo Backer",
+        "responsavel": "Valdecir"
+
+}
+
+###
+GET http://localhost:3000/alunos/listarAlunos
+
+
+###
+GET http://localhost:3000/alunos/buscarAlunos/00999
+
+###
+PUT http://localhost:3000/alunos/editarAlunos/12345
+content-type: application/json
+
+{
+        "nome": "Adriana",
+        "email": "falecomval@hotmail.com",
+        "turma": "A",
+        "serie": 3,
+        "sexo": "F",
+        "telefone": "(84) 988382952",
+        "endereco": "Rua Clodoaldo Backer",
+        "responsavel": "Valdecir"
+
+}
+
+###
+DELETE http://localhost:3000/alunos/excluirAlunos/12345
+content-type: application/json

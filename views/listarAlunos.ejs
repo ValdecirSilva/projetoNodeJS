@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Alunos</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <herder>
+        <h1>Listagem de Alunos</h1>
+    </herder>
+    <main>
+        <section>
+            <h2>Dashboard</h2>
+            <% if(bancoAlunos.length>0) {%>
+                <table> 
+                    <tr>
+                        <th>Matricula</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Turma</th>
+                        <th>Serie</th>
+                        <th>Sexo</th>
+                        <th>Telefone</th>
+                        <th>Endereco</th>
+                        <th>Responsavel</th>
+                        <th colspan="2">Ações</th>
+                    </tr>
+                 <% bancoAlunos.forEach(aluno =>{  %>
+                    <tr>
+                        <td><%= aluno.MATRICULA %></td>
+                        <td><%= aluno.NOME %></td>
+                        <td><%= aluno.EMAIL %></td>
+                        <td><%= aluno.TURMA %></td>
+                        <td><%= aluno.SERIE %></td>
+                        <td><%= aluno.SEXO %></td>
+                        <td><%= aluno.TELEFONE %></td>
+                        <td><%= aluno.ENDERECO %></td>
+                        <td><%= aluno.RESPONSAVEL %></td>
+                        <td><a href="/alunos/editarAluno/<%= aluno.MATRICULA %>">Editar</a></td>
+                        <td><a href="/alunos/excluirAluno/<%= aluno.MATRICULA %>">Remover</a></td>
+
+                    </tr>
+                    <%}); %>
+                </table>
+            <% }else{ %>
+                <p>Nenhum resgistro cadastrado</p>
+            <% } %>
+        </section>
+    </main>
+
+
+
+    
+</body>
+</html>

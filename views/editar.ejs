@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Cadastro de Alunos</title>
+   <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Cadastro de Alunos</h1>
+        </header>
+        <section>
+            <% aluno.forEach(dado =>{ %>
+            <form method="post" action="/alunos/editarAluno/<%= dado.MATRICULA %>?_method=PUT">
+                Matricula: <input type="text" name="matricula" id="matricula" value="<%= dado.MATRICULA %>" disabled><br>
+                Nome: <input type="text" name="nome" id="nome" value="<%= dado.NOME %>"><br>
+                Email: <input type="email" name="email" id="email" value="<%= dado.EMAIL %>"><br>
+                Turma: <input type="text" name="turma" id="turma" value="<%= dado.TURMA %>"><br>
+                Serie: <input type="number" name="serie" id="serie" value="<%= dado.SERIE %>"><br>
+                Sexo: <input type="text" name="sexo" id="sexo" value="<%= dado.SEXO %>"><br>
+                Telefone: <input type="fone" name="telefone" id="telefone" value="<%= dado.TELEFONE %>"><br>
+                Endereço: <input type="text" name="endereco" id="endereco" value="<%= dado.ENDERECO %>"><br>
+                Responsavel: <input type="text" name="responsavel" id="responsavel" value="<%= dado.RESPONSAVEL %>"><br>
+                <input type="submit" value="Cadastrar">
+            </form>
+            <% }) %>
+        </section>
+    </main>
+</body>
+</html>
